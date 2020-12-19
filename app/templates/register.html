@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="post" class="container col-md-4">
+    <h3 class="text-center">Sign Up!</h3>
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token() }}
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        {{ form.name(class="form-control") }}
+        {% if form.name.errors %}
+          <ul class="text-danger">
+          {% for error in form.name.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="grno">G.R. No.</label>
+        {{ form.grno(class="form-control") }}
+        {% if form.grno.errors %}
+          <ul class="text-danger">
+          {% for error in form.grno.errors %}
+            <li>Invalid input!</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        {{ form.username(class="form-control") }}
+        {% if form.username.errors %}
+          <ul class="text-danger">
+          {% for error in form.username.errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      {{ form.email(type="email", class="form-control", id="exampleInputEmail1", **{"aria-describedby":"emailHelp"}) }}
+      <!--input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small-->
+      {% if form.email.errors %}
+        <ul class="text-danger">
+        {% for error in form.email.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      {{ form.password(type="password", class="form-control", id="exampleInputPassword1") }}
+      <!--input type="password" class="form-control" id="exampleInputPassword1"-->
+      {% if form.password.errors %}
+        <ul class="text-danger">
+        {% for error in form.password.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      {{ form.password2(type="password", class="form-control") }}
+      {% if form.password2.errors %}
+        <ul class="text-danger">
+        {% for error in form.password2.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+    <!--div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div-->
+    <div class="text-center">
+        {{ form.submit(type="submit", class="btn btn-primary") }}
+        <!--button type="submit" class="btn btn-primary">Submit</button-->
+    </div>
+</form>
+{% endblock %}
