@@ -17,17 +17,6 @@
         {% endif %}
     </div>
     <div class="form-group">
-        <label for="grno">G.R. No.</label>
-        {{ form.grno(class="form-control") }}
-        {% if form.grno.errors %}
-          <ul class="text-danger">
-          {% for error in form.grno.errors %}
-            <li>Invalid input!</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-    </div>
-    <div class="form-group">
         <label for="username">Username</label>
         {{ form.username(class="form-control") }}
         {% if form.username.errors %}

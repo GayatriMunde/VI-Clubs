@@ -1,8 +1,8 @@
 from flask import render_template, url_for, redirect, flash, request
-from app import app, db
+from app import app, db, authorize
 from app.forms import LoginForm, SRegistrationForm, CRegistrationForm, ResetPasswordRequestForm, ResetPasswordForm
 from flask_login import current_user, login_user, logout_user
-from app.models import Student, Cord, Club
+from app.models import User, Role, Member, Cord, Club, Category
 from app.email import send_password_reset_email
 
 @app.route('/')
@@ -15,9 +15,7 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        user = Student.query.filter_by(username=form.username.data).first()
-        if user is None:
-            user = Cord.query.filter_by(username=form.username.data).first()
+        user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password', 'danger')
             return redirect(url_for('login'))
@@ -36,8 +34,12 @@ def register():
         return redirect(url_for('index'))
     form = SRegistrationForm()
     if form.validate_on_submit():
-        user = Student(name=form.name.data, grno=form.grno.data, username=form.username.data, email=form.email.data)
+        mem = Member(name=form.name.data)
+        role = Role.query.filter_by(name='member').first()
+        user = User(username=form.username.data, email=form.email.data, member=mem)
         user.set_password(form.password.data)
+        user.roles = [role]
+        db.session.add(mem)
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!', 'success')
@@ -45,14 +47,20 @@ def register():
     return render_template('register.html', form=form, title="VI Clubs - Sign up!")
 
 @app.route('/register_club', methods=['GET', 'POST'])
+@authorize.has_role('admin')
 def registerclub():
     form = CRegistrationForm()
     if form.validate_on_submit():
-        club = Club(clubname=form.clubname.data, categoryid=form.category.data)
-        db.session.add(club)
-        cord = Cord(leadname=form.leadname.data, sectname=form.sectname.data, username=form.username.data, email=form.email.data, club_id=Club.query.count())
-        cord.set_password(form.password.data)
-        db.session.add(cord)
+        categorytype = Category.query.filter_by(id=form.category.data).first()
+        print(categorytype)
+        club = Club(clubname=form.clubname.data, clubtype=categorytype)
+        cord = Cord(cordname=form.cordname.data, collegeclub=club)
+        role = Role.query.filter_by(name='cord').first()
+        user = User(username=form.username.data, email=form.email.data, cord=cord)
+        user.set_password(form.password.data)
+        user.roles = [role]
+        db.session.add(club, cord)
+        db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!', 'success')
         return redirect(url_for('login'))
@@ -64,9 +72,7 @@ def forgot_password():
         return redirect(url_for('index'))
     form = ResetPasswordRequestForm()
     if form.validate_on_submit():
-        user = Student.query.filter_by(email=form.email.data).first()
-        if user is None:
-            user = Cord.query.filter_by(email=form.email.data).first()
+        user = User.query.filter_by(email=form.email.data).first()
         if user is not None:
             send_password_reset_email(user)
             flash('Check your email for the instructions to reset your password', 'info')
@@ -80,9 +86,7 @@ def forgot_password():
 def reset_password(token):
     if current_user.is_authenticated:
         return redirect(url_for('index'))
-    user = Student.verify_reset_password_token(token)
-    if user is None:
-        user = Cord.verify_reset_password_token(token)
+    user = User.verify_reset_password_token(token)
     if not user:
         return redirect(url_for('index'))
     form = ResetPasswordForm()
