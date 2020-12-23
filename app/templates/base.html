@@ -33,22 +33,22 @@
                   Clubs
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <div class="row" style="width: 250px; margin-left: 1px;">
+                    <div class="row" style="width: 350px; margin-left: 1px;">
                       <div class="col-md-auto mb-md-0 mb-3">
                         <p>Technical</p>
                         <ul class="list-unstyled">
-                          <li><a href="{{ url_for('club', name='trf') }}">TRF</a></li>
-                          <li><a href="#">MLSC</a></li>
-                          <li><a href="#">...</a></li>
+                          <li><a href="{{ url_for('club', name='trf') }}">The Robotics Forum</a></li>
+                          <li><a href="{{ url_for('club', name='mlsc') }}">MLSC</a></li>
+                          <li><a href="{{ url_for('club', name='tl') }}">Trident Labs</a></li>
                         </ul>
                       </div>
-                      
+
                       <div class="col-md-auto mb-md-0 mb-3">
                         <p>Non-Technical<p>
                         <ul class="list-unstyled">
-                          <li><a href="#">ViCulp</a></li>
-                          <li><a href="#">Aarohi</a></li>
-                          <li><a href="#">...</a></li>
+                          <li><a href="{{ url_for('club', name='viculp') }}">VICulp</a></li>
+                          <li><a href="{{ url_for('club', name='v-click') }}">V-Click</a></li>
+                          <li><a href="#"></a></li>
                         </ul>
                       </div>
                     </div>
