@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  
+  <h2 class="text-center" id="logo"><img src="{{ url_for('static', filename='images/logos/vishwa.PNG') }}" style="border-radius: 50%;" width="100"/> Vishwakarndak </h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{ url_for('static', filename='images/vishwa/14.PNG') }}" class="d-block w-100" alt="..." width="200" height="600">
+          <div class="carousel-caption d-none d-md-block" >
+            <h5>Vishwakarndak</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/vishwa/17.PNG') }}" class="d-block w-100" alt="..." width="200" height="600">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Vishwakarndak</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{{ url_for('static', filename='images/vishwa/30.PNG') }}" class="d-block w-100" alt="..." width="200" height="600">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Vishwakarndak</h5>
+            <p>...</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <br><br><br><br>
+  
+  <div class = "mainblock" style="text-align: center; color: cornsilk;" >
+  <h2 style="padding-top: 0.7cm;"> Mission And Vision </h2><br>
+  <p style="padding: 0.7cm;">
+      This festival is specially orginzed for the new commer student to feel free and to interact more with all other depeartments. There is battel between differnt deparment <br>
+    all the student take part to show their talent in fornt of all and to encourage them epoec and other teams arrange this program.at the last of event the winner gets the troffy and some price money..
+     <br> The festval is divided in tgree parts like "Sports","Technical","Extra-Carricular" . </p>
+  </div>
+</div>
+  
+  <br><br><br><br>
+  <div class = "container"> 
+    <div class="card-deck">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/vishwa/1.PNG') }}" class="card-img-top" alt="..." height="350">
+        <div class="card-body">
+          <h5 class="card-title" >Technical </h5>
+          
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/vishwa/2.PNG') }}" class="card-img-top" alt="..." height="350">
+        <div class="card-body">
+          <h5 class="card-title">Extra carricular</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/vishwa/3.PNG') }}" class="card-img-top" alt="..." height="350">
+        <div class="card-body">
+          <h5 class="card-title">Sport</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+      </div>
+    </div>
+    <br> <br>
+    
+</div>
+</body>
+{% endblock %}
