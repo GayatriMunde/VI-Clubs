@@ -56,157 +56,34 @@
 
 <br><br>
 
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="{{ url_for('static', filename='images/index3.jpg') }}" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/nature.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/fjords.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/lights.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/nature.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/fjords.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/lights.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Lights" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/nature.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Nature" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/fjords.jpg" target="_blank">
-          <img src="{{ url_for('static', filename='images/index3.jpg') }}" alt="Fjords" style="width:100%">
-          <div class="caption">
-            <p> <br> </p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
--->
-
 <div class = "container"> 
   <div class="card-deck">
     <div class="card">
-      <img src="{{ url_for('static', filename='images/index3.jpg') }}" class="card-img-top" alt="..." height="350">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <div class="content">
+        <a href="{{url_for('club', name='melange')}}" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="{{url_for('static', filename='/images/vishwa/index.jpg')}}">
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">Me`lange</h3>
+            <p class="content-text">The annual inter-college fest</p>
+          </div>
+        </a>
       </div>
     </div>
     <div class="card">
-      <img src="{{ url_for('static', filename='images/index2.jpg') }}" class="card-img-top" alt="..." height="350">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="{{ url_for('static', filename='images/index1.jpg') }}" class="card-img-top" alt="..." height="350">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <div class="content">
+        <a href="{{url_for('club', name='vishwa')}}" target="_blank">
+          <div class="content-overlay"></div>
+          <img class="content-image" src="{{url_for('static', filename='/images/melange/index.jpg')}}">
+          <div class="content-details fadeIn-bottom">
+            <h3 class="content-title">Vishwakarandak</h3>
+            <p class="content-text">The annual inter-departmental fest</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
   <br> <br>
-  <div class="card-deck">
-    <div class="card">
-      <img src="{{ url_for('static', filename='images/index3.jpg') }}" class="card-img-top" alt="..." height="350">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="{{ url_for('static', filename='images/index2.jpg') }}" class="card-img-top" alt="..." height="350">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-    <div class="card">
-      <img src="{{ url_for('static', filename='images/index1.jpg') }}" class="card-img-top" alt="..." height="350">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-    </div>
-  </div>
 </div>
 
 {% endblock %}

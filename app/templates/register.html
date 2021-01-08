@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="main" style="height: 100%; width: 35%;">
+<div class="main" style="height: 100%; width: 45%;">
 <br>
-  <form action="" method="post" class="container col-md-12">
+  <form action="" method="post" class="container col-md-8">
     <h3 class="text-center">Sign Up!</h3>
     {{ form.hidden_tag() }}
     {{ form.csrf_token() }}
@@ -69,9 +69,13 @@
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div-->
-    <div class="text-center">
-        {{ form.submit(type="submit", class="btn btn-primary") }}
+    <div>
+        {{ form.submit(type="submit", class="submit", style="background-color: rgb(88, 33, 16)") }}
         <!--button type="submit" class="btn btn-primary">Submit</button-->
+    </div>
+    <br>
+    <div class="text-center">
+      <p>Already have an account?<a href="{{ url_for('login') }}" style="color: black;"> Log in!</a></p>
     </div>
 </form>
 <br>

@@ -1,5 +1,5 @@
     .main {
-        background-color: #2e2525;
+        background-color: #e2caca;
         width: 650px;
         height: 800px;
         margin: 7em auto;
@@ -70,7 +70,7 @@
       cursor: pointer;
         border-radius: 5em;
         color: #fff;
-        background: linear-gradient(to right, #9C27B0, #E040FB);
+        background: linear-gradient(to right, #3f2525, #a57171);
         border: 0;
         padding-left: 40px;
         padding-right: 40px;
@@ -79,7 +79,7 @@
         font-family: 'Ubuntu', sans-serif;
         margin-left: 35%;
         font-size: 13px;
-        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.04);
     }
     
     .forgot {

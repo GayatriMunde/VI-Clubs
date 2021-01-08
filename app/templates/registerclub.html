@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="main" style="height: 100%; width: 35%;">
+<div class="main" style="height: 100%; width: 45%;">
   <br>
-  <form class="container col-md-12" action="" method="post">
+  <form class="container col-md-8" action="" method="post">
     <h3 class="text-center">Register Club!</h3>
     {{ form.hidden_tag() }}
     {{ form.csrf_token() }}
@@ -83,9 +83,9 @@
           {% endfor %}
           </ul>
         {% endif %}
-      </div>
-      <div class="text-center">
-          {{ form.submit(type="submit", class="btn btn-primary") }}
+      </div><br>
+      <div>
+          {{ form.submit(type="submit", class="submit", style="background-color: rgb(88, 33, 16)") }}
       </div>
 </form>
 <br>
