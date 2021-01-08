@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="" method="post" class="container col-md-4">
+<div class="main" style="height: 100%; width: 35%;">
+<br>
+  <form action="" method="post" class="container col-md-12">
     <h3 class="text-center">Sign Up!</h3>
     {{ form.hidden_tag() }}
     {{ form.csrf_token() }}
@@ -72,4 +74,6 @@
         <!--button type="submit" class="btn btn-primary">Submit</button-->
     </div>
 </form>
+<br>
+</div>
 {% endblock %}
