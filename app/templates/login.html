@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<br>
-<form action="" method="post" class="container col-md-4">
-  <h3 class="text-center">Log in!</h3>
+
+<div class="main">
+<form action="" method="post" class="container col-md-12">
+  <h3 class="text-center">Log in!</h3><br>
   {{ form.hidden_tag() }}
   {{ form.csrf_token() }}
   <div class="form-group">
@@ -30,5 +31,10 @@
     <p>Don't have an account?<a href="{{ url_for('register') }}"> Sign up!</a></p>
   </div>
 </form>
-<br><br><br><br>
+
+          
+              
+  </div>
+
+
 {% endblock %}

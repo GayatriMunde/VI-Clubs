@@ -8,12 +8,16 @@
  
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/wrapper.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='/styles/button.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles/login.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.1.3-dist/css/bootstrap.min.css.map') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-4.5.3/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     
 
     <title>{% if title %}{{ title }}{% else %}Welcome to VI Clubs!{% endif %}</title>
@@ -30,6 +34,7 @@
     </style>
   </head>
   <body style="overflow: scroll;">
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('index') }}">VI Clubs</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +46,10 @@
             
             <li class="nav-item active">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <br>Clubs
                 </a>
+<<<<<<< HEAD
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown"><br>
                     <div class="row" style="width: 350px; margin-left: 1px;">
                       <div class="col-md-auto mb-md-0 mb-3">
@@ -75,16 +81,28 @@
                         </ul>
                       </div> -->
                     </div>
+=======
+                
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{{ url_for('club', name='tech_index') }}">Technical Clubs</a>
+                  <a class="dropdown-item" href="{{ url_for('club', name='non-tech_index') }}">Extra-curricular Clubs</a>
+                  <a class="dropdown-item" href="#">VIT Socials</a>
+                  <a class="dropdown-item" href="#">Sports Section</a>
+                  <a class="dropdown-item" href="{{ url_for('club', name='vishwa') }}">Vishwakarandak</a>
+                  <a class="dropdown-item" href="{{ url_for('club', name='melange') }}">Melange</a>
+                  <!--a class="dropdown-item" href="{{ url_for('registerclub') }}">Register a club</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a-->
+>>>>>>> 0b35699c7be58d833c7a55d910a613461ad4013e
                 </div>
               </li>
             </li> 
             {% if current_user.is_anonymous %}
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}"><br>Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}"><br>Signup</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('forum') }}"><br>Discussion Forum</a></li>
+            <li class="nav-item"><a style="color: white;" class="nav-link" href="{{ url_for('login') }}"><br>Login</a></li>
+            <li class="nav-item"><a style="color: white;" class="nav-link" href="{{ url_for('register') }}"><br>Signup</a></li>
             {% else %}
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a style="margin-top: 20%; color: white;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Hello {{current_user.username}} {{current_user.club_id}}
                 </a>
                 {% if current_user.username == 'admin' %}
@@ -104,9 +122,10 @@
                 {% endif %}
             </li>
             {% endif %}
+            <li class="nav-item"><a style="color: white;" class="nav-link" href="{{ url_for('forum') }}"><br>Discussion Forum</a></li>
           </ul>
         </div>
-    </nav>
+    </nav> 
 
     <div class="row">
       <div class="container col-md-5 col-md-offset-4">
@@ -135,6 +154,7 @@
     </footer>
 
     <script src="{{ url_for('static', filename='/base.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='bootstrap-4.5.3/js/jquery-3.5.1.slim.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap-4.5.3/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='bootstrap-4.1.3-dist/js/bootstrap.min.js') }}"></script>
