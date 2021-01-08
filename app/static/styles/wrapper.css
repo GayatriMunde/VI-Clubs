@@ -72,8 +72,8 @@ h1{
       height: 100%;
       content: '';
       display: block;
-      opacity: .6;
-      background-color: rgb(252, 222, 222);
+      opacity: 0.2;
+      background-color: #000;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       border-radius: 10px;

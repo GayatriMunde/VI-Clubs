@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper">
+    <h1>Extra-curricular Clubs</h1>
+    <h2>Tell me and I forget, teach me and I may remember, involve me and I learn.</h2><br>
+    <div class="cols">
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <a href="{{ url_for('club', name='mun') }}">
+                    <div class="container">
+                        <div class="front" style="background-image: url('/static/images/logos/mun.png')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Model United Nations</p>
+                            </div>
+                        </div>
+                    </div>
+                  </a>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <a href="{{ url_for('club', name='tedx') }}">
+                        <div class="front" style="background-image: url('/static/images/logos/tedx.jpeg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>TEDx VIT Pune</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <a href="{{ url_for('club', name='v-click') }}">
+                        <div class="front" style="background-image: url('/static/images/logos/vclick.jpg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>V-Click</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+   </div>
+
+   <div class="wrapper">
+    <div class="cols">
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="container">
+                      <a href="{{ url_for('club', name='viculp') }}">
+                        <div class="front" style="background-image: url('/static/images/logos/viculp.jpg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>VICulp</p>
+                            </div>
+                        </div>
+                      </a>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <a href="">
+                        <div class="front" style="background-image: url('/static/images/logos/antariksh.jpeg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>Antariksh</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <a href="">
+                        <div class="front" style="background-image: url('/static/images/logos/vc.jpeg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>Vishwa Conclave</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+          </div>
+   </div>
+
+{% endblock %}

@@ -7,81 +7,85 @@
     <h2>Provides you a simple solution for complex collection!</h2><br>
     <div class="cols">
               <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <a href="{{ url_for('club', name='mlsc') }}"></a>
-                  <div class="container">
-                      <div class="front" style="background-image: url('/static/images/logos/mlsc.jpeg')">
-                      </div>
-                      <div class="back">
-                          <div class="inner">
-                            <a href="{{ url_for('club', name='mlsc') }}"></a>
-                            <p>Microsoft Learn Student Club</p>
-                          </div>
-                      </div>
-                  </div>
+                  <a href="{{ url_for('club', name='mlsc') }}">
+                    <div class="container">
+                        <div class="front" style="background-image: url('/static/images/logos/mlsc.jpeg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Microsoft Learn Student Club</p>
+                            </div>
+                        </div>
+                    </div>
+                  </a>
               </div>
               <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <a href="{{ url_for('club', name='trf') }}"></a>
-                    <div class="front" style="background-image: url('/static/images/logos/trf.jpeg')">
-                    </div>
-                    <div class="back">
-                        <div class="inner">
-                          <p>The Robotics Forum</p>
+                    <a href="{{ url_for('club', name='trf') }}">
+                        <div class="front" style="background-image: url('/static/images/logos/trf.jpeg')">
                         </div>
-                    </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>The Robotics Forum</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <a href="{{ url_for('club', name='tl') }}"></a>
-                    <div class="front" style="background-image: url('/static/images/logos/tl.jpeg')">
-                    </div>
-                    <div class="back">
-                        <div class="inner">
-                          <p>Tradient Labs</p>
+                    <a href="{{ url_for('club', name='tl') }}">
+                        <div class="front" style="background-image: url('/static/images/logos/tl.jpeg')">
                         </div>
-                    </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>Trident Labs</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
           </div>
    </div>
 
    <div class="wrapper">
-    <div class="cols">
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
-                  <div class="container">
-                      <div class="front" style="background-image: url('/static/images/logos/ieee.jpeg')">
-                      </div>
-                      <div class="back">
-                          <div class="inner">
-                            <p>IEEE VIT Pune</p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="cols">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url('/static/images/logos/isa.jpeg')">
+                    <a href="{{ url_for('club', name='dsc') }}">
+                        <div class="front" style="background-image: url('/static/images/logos/dsc.jpeg')">
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                            <p>Developers Student Club</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
+                <div class="container">
+                    <div class="front" style="background-image: url('/static/images/logos/ieee.jpeg')">
                     </div>
                     <div class="back">
                         <div class="inner">
-                          <p>ISA? (mate change this!)</p>
+                        <p>IEEE VIT Pune</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
-                    <div class="front" style="background-image: url('/static/images/logos/dsc.jpeg')">
+                    <div class="front" style="background-image: url('/static/images/logos/isa.jpeg')">
                     </div>
                     <div class="back">
                         <div class="inner">
-                          <p>Developers Student Club</p>
+                            <p>International Society of Automation VIT Pune Student Section</p>
                         </div>
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
    </div>
 
 {% endblock %}
