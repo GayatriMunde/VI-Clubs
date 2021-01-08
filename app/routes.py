@@ -100,3 +100,7 @@ def reset_password(token):
 @app.route('/clubs/<name>', methods=['GET', 'POST'])
 def club(name):
     return render_template(name+'.html', title=name.upper()+" - VI Clubs")
+
+@app.route('/forum')
+def forum():
+    return render_template('forum.html')

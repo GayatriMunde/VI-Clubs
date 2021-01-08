@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if current_user.is_anonymous %}
+
+<center>
+    <div style="width: 50%; left: 0%; z-index: 1010101010">
+        <center>
+            <img src="{{ url_for('static', filename='/images/undraw/accessDenied.png') }}" alt="error403" style="max-height: 20%; max-width: 40%;">
+        </center>
+    </div> 
+
+    <div style="width: 50%; left: 50%;z-index: 1010101010">
+        <center>
+            <p><h1 style="color: rgb(88, 33, 16);">403 : ACCESS DENIED</h1></p> <br>
+
+            <a href="" class="typewrite" style="color:rgb(88, 33, 16);" data-period="2000" data-type='[ "Kindly Login to access this forum", "If you are new, please sign up!" ]'>
+                <span class="wrap"></span>
+            </a>
+
+            <button class="button" style="vertical-align:middle; background-color: rgb(88, 33, 16); color: seashell;"><a href="{{ url_for('login') }}" style="color: seashell;"><span>Login </span></a></button>
+            <br>
+        </center>
+    </div>
+</center>
+
+{% else %}
+
+<h1>Hola!</h1>
+{% endif %}
+{% endblock %}
