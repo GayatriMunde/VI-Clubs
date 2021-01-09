@@ -75,7 +75,7 @@
     </div>
     <div class="card">
       <div class="content">
-        <a href="{{url_for('club', name='megaVishwa')}}" target="_blank">
+        <a href="{{url_for('club', name='megaVishwa')}}">
           <div class="content-overlay"></div>
           <img class="content-image" src="{{url_for('static', filename='/images/melange/index.jpg')}}">
           <div class="content-details fadeIn-bottom">
@@ -87,7 +87,7 @@
     </div>
     <div class="card">
       <div class="content">
-        <a href="#" target="_blank">
+        <a href="#">
           <div class="content-overlay"></div>
           <img class="content-image" src="{{url_for('static', filename='/images/melange/index2.jpg')}}">
           <div class="content-details fadeIn-bottom">
@@ -101,4 +101,47 @@
   <br> <br>
 </div>
 
+  <div class = "mainblock" style="text-align: center; color: cornsilk;"><br>
+    <p class="typewrite" style="color: cornsilk; font-size: x-large; margin-bottom: 1.5%;" data-period="2000" data-type='[ "Stay connected with all club activities ", "All club information at one stop!! " ]'>
+      <span class="wrap"></span>
+    </p><br><br>
+    </div>
+    
+<div class="container">
+  <br><br>
+  <h1 style="color: rgb(88, 33, 16);"> PAST EVENTS </h1><br>
+  <div class="container">
+    <div class="card-deck">
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/events/dsc_p.jpg') }}" class="card-img-top" alt="..." height="360">
+        <div class="card-body">
+          <h5 class="card-title"> Android Jam by <a href="{{ url_for('club', name='dsc') }}" style="color: brown;">DSC</a></h5>
+          <p class="card-text">The workshop covered the basics of Kotlin, questions like Why is kotlin a preferred language for development? 
+            Followed by the Android Demo, in which we built a very small android application in kotlin.
+            The workshop concluded with QnA session.
+            </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/events/mlsc_p.jpg') }}" class="card-img-top" alt="..." height="350">
+        <div class="card-body">
+          <h5 class="card-title">Workshop on Linux and Shell-Scripting by <a href="{{ url_for('club', name='mlsc') }}" style="color: brown;">MLSC</a></h5>
+          <p class="card-text">The workshop started with QnA session with former Microsoft Intern Kritika which was follwed by the workshop on Introduction to Linux and Shell Scripiting. 
+            This workshop ended with a Kahoot competition.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{{ url_for('static', filename='images/events/ieee_p.jpg') }}" class="card-img-top" alt="..." height="350">
+        <div class="card-body">
+          <h5 class="card-title">A fronted website Design competition by IEEE.</h5>
+          <p class="card-text">IEEE SB VIT Pune recently organized, ZENITH, a Frontend Web Development Competition. In which every team represented and developed a website for their civilization.
+            It was a three day competition comprising of 2 rounds with an exciting price of Rs. 4000.<br>Winner: Team Webrockers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  
 {% endblock %}
