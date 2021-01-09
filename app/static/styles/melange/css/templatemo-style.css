@@ -41,7 +41,7 @@ video::-webkit-media-controls {
 
 .primary-button a {
   display: inline-block;
-  background-color: #ffbb05;
+  background-color:rgb(88, 33, 16);
   color: #343434;
   font-size: 13px;
   padding: 12px 18px;
@@ -52,7 +52,7 @@ video::-webkit-media-controls {
 
 .primary-button a:hover {
   background-color: transparent;
-  border: 1px solid #ffbb05;
+  border: 1px solid rgb(88, 33, 16);
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -143,7 +143,7 @@ video::-webkit-media-controls {
 }
 
 .cd-slider-nav ul .selected h6 {
-  color: #ffbb05;
+  color:rgb(88, 33, 16);
   text-decoration: none;
 }
 
@@ -158,7 +158,7 @@ video::-webkit-media-controls {
   text-align: center;
   margin: 0px;
   padding: 0px;
-  background-color: #ffbb05;
+  background-color:rgb(88, 33, 16)
 }
 
 .cd-slider-nav .image-icon:hover {
@@ -172,7 +172,7 @@ video::-webkit-media-controls {
   margin-bottom: 100px;
   margin-top: -80px;
   background-color: #fff;
-  border-top: 15px solid #ffbb05;
+  border-top: 15px solid rgb(88, 33, 16);
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -225,7 +225,7 @@ video::-webkit-media-controls {
 .heading span {
   font-size: 16px;
   text-transform: uppercase;
-  color: #ffbb05;
+  color: rgb(88, 33, 16);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
@@ -277,7 +277,7 @@ video::-webkit-media-controls {
 .second-slide .heading span {
   font-size: 16px;
   text-transform: uppercase;
-  color: #ffbb05;
+  color: rgb(88, 33, 16);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
@@ -359,7 +359,7 @@ video::-webkit-media-controls {
 .third-slide .heading span {
   font-size: 16px;
   text-transform: uppercase;
-  color: #ffbb05;
+  color: rgb(88, 33, 16);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
@@ -394,7 +394,7 @@ video::-webkit-media-controls {
 .third-content .right-feature-text h4 em {
   font-style: normal;
   font-weight: 700;
-  color: #ffbb05;
+  color: rgb(88, 33, 16);
 }
 
 .third-content .feature-list {
@@ -439,7 +439,7 @@ video::-webkit-media-controls {
 .fourth-slide .heading span {
   font-size: 16px;
   text-transform: uppercase;
-  color: #ffbb05;
+  color: rgb(88, 33, 16);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
@@ -482,7 +482,7 @@ video::-webkit-media-controls {
 .fivth-slide .heading span {
   font-size: 16px;
   text-transform: uppercase;
-  color: #ffbb05;
+  color: rgb(88, 33, 16);
   font-weight: 300;
   letter-spacing: 0.5px;
 }
@@ -519,7 +519,7 @@ video::-webkit-media-controls {
 }
 
 .fivth-content .left-info i:hover {
-  background-color: #ffbb05;
+  background-color: rgb(88, 33, 16);
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
@@ -571,7 +571,7 @@ video::-webkit-media-controls {
 
 .fivth-content button {
   display: inline-block;
-  background-color: #ffbb05;
+  background-color: rgb(88, 33, 16);
   color: #343434;
   font-size: 13px;
   padding: 12px 18px;
@@ -583,7 +583,7 @@ video::-webkit-media-controls {
 
 .fivth-content button:hover {
   background-color: transparent;
-  border: 1px solid #ffbb05;
+  border: 1px solid rgb(88, 33, 16);
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
@@ -598,7 +598,7 @@ video::-webkit-media-controls {
 */
 
 footer {
-  background-color: #ffbb05;
+  background-color: rgb(88, 33, 16);
   position: relative;
   width: 100%;
   bottom: 0;
@@ -661,7 +661,7 @@ footer a {
   }
 
   .cd-slider-nav {
-    background-color: #ffbb05;
+    background-color: rgb(88, 33, 16);
     width: 100%;
     height: 80px;
     line-height: 80px;
@@ -697,7 +697,7 @@ footer a {
     margin-bottom: 100px;
     margin-top: -100px;
     background-color: #fff;
-    border-top: 15px solid #ffbb05;
+    border-top: 15px solid rgb(88, 33, 16);
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   }
 
