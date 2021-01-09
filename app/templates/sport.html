@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+
+table,td,th{
+    border:3px solid #ddd;
+
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin:1em auto;
+  
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color:rgb(226, 104, 67); color:black;}
+</style>
+
+<body>
+    <h2 class="text-center" id="logo"><img src="{{ url_for('static', filename='/images/logos/sport.PNG') }}" style="border-radius: 50%;" width="100" alt="logo"/> Sports Activities</h2>
+    <div class="container">
+      
+        <div id="carouselExampleCaptions" class="carousel slide" style="width: 800px; margin: 0 auto" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{{ url_for('static', filename='/images/sports/sport3.PNG') }}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Cricket</h5>
+                <!--p>...</p-->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='/images/sports/sport4.PNG') }}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Horse riding</h5>
+                <!--p>...</p-->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='/images/sports/sport5.PNG') }}" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Volleyball</h5>
+                <!--p>...</p-->
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+
+<br><br><br><br><br>
+ 
+<h5 style="text-align: center;">LIST OF STUDENTS WHO REPRESENTED UNIVERSITY OF PUNE AT NATIONAL AND STATE LEVELCOMPETITIONS IN VARIOUS SPORTS.</h5>
+<br><br><br>
+
+<table>
+  <tr>
+  <th>Sr. No.</th>
+  <th>Name of student</th>
+  <th>Branch</th>
+  <th>Event</th>
+  <th>Award</th>
+
+  </tr>
+  <tr>
+  <td>1</td>
+  <td>Vishwajeet Dangat </td>
+  <td>Elex.Engg</td>
+  <td>Shothing</td>
+  <td>Silver Medal</td>
+  </tr>
+  <tr>
+  <td>2</td>
+  <td>Shrikant Mundhe</td>
+  <td>elex.Engg</td>
+  <td>Cricket</td>
+  <td>Cooch Behar Trophy</td>
+  </tr>
+  <tr>
+  <td>3</td>
+  <td>Ritwik unhale</td>
+  <td>Elex.engg</td>
+  <td>Archery</td>
+  <td>Participation</td>
+  </tr>
+  <tr>
+  <td>4</td>
+  <td>Devavrat Rakshe</td>
+  <td>B.E. Elex</td>
+  <td>Volleyball</td>
+  <td>Silver Medal</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Prachi Joshi</td>
+    <td>T.E.Elex</td>
+    <td>Basketball</td>
+    <td>Ashwamedh</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Bhagyshree Shirke</td>
+        <td>M.E. Instru </td>
+        <td>Athletics</td>
+        <td>Bronze Medal</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Tanmay Kawathekar</td>
+            <td>F.Y. B.Tech </td>
+            <td>Basketball</td>
+            <td>silver Medal</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Roshan Rangarajan</td>
+                <td>T.Y.B.Tech </td>
+                <td>Chess</td>
+                <td>Gold Medal</td>
+                </tr>
+            <tr>
+                    <td>9</td>
+                    <td>Anurag Gote</td>
+                    <td>T.Y.B.Tech </td>
+                    <td>Table Tennis</td>
+                    <td>Participation</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Sanyogeeta Kadu</td>
+                <td>T.Y.B.Tech Elex </td>
+                <td>Horse Riding</td>
+                <td> Gold in Western Eqestrian </td>
+        </tr>
+</table>
+
+</body>
+
+{% endblock %}
